@@ -1,4 +1,4 @@
-local langs = { "c", "json", "lua", "proto", "typescript", "go", "gomod", "gosum", "vim", "vimdoc", "regex", "sql" }
+local langs = { "c", "json", "lua", "proto", "typescript", "go", "vim", "sql" }
 
 return {
   {
