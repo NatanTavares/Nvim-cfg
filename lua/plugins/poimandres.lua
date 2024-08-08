@@ -4,12 +4,12 @@ return {
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme "poimandres"
-      require('poimandres').setup {
+      -- vim.cmd.colorscheme "poimandres"
+      -- require('poimandres').setup {
         -- leave this setup function empty for default config
         -- or refer to the configuration section
         -- for configuration options
-      }
+      -- }
   end,
 }
 

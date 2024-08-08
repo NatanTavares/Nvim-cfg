@@ -3,7 +3,7 @@ local langs = {"c", "json", "lua", "proto", "typescript", "go", "gomod", "gosum"
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
-  config = function () 
+  config = function ()
     local configs = require("nvim-treesitter.configs")
     configs.setup({
       ensure_installed = langs,

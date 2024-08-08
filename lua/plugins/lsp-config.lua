@@ -10,6 +10,7 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     config = function()
+      require("mason")
       require("mason-lspconfig").setup({
         ensure_installed = lsps
       })
@@ -18,6 +19,11 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
+      require("mason")
+      require("mason-lspconfig").setup({
+        ensure_installed = lsps
+      })
+
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({})
       lspconfig.gopls.setup({})
