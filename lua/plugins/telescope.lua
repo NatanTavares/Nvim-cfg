@@ -9,8 +9,25 @@ return {
 		config = function()
 			local telescope = require("telescope")
 			local builtin = require("telescope.builtin")
+			local actions = require("telescope.actions")
+			local action_state = require("telescope.actions.state")
 
 			telescope.setup({
+				defaults = {
+					mappings = {
+						i = {
+							["<S-CR>"] = function(prompt_bufnr)
+								local selection = action_state.get_selected_entry()
+								if not selection then
+									return
+								end
+								actions.close(prompt_bufnr)
+								vim.cmd("vsplit " .. vim.fn.fnameescape(selection.value))
+							end,
+						},
+					},
+				},
+
 				extensions = {
 					["ui-select"] = {
 						theme = require("telescope.themes").get_dropdown({
