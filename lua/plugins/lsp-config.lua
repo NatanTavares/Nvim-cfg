@@ -1,4 +1,4 @@
-local lsps = { "lua_ls", "golangci_lint_ls", "gopls", "buf_ls", "html" }
+local lsps = { "lua_ls", "golangci_lint_ls", "gopls", "buf_ls" }
 
 return {
 	{
@@ -34,7 +34,6 @@ return {
 			lspconfig.golangci_lint_ls.setup({ capabilities = capabilities })
 
 			lspconfig.buf_ls.setup({ capabilities = capabilities })
-			lspconfig.html.setup({ capabilities = capabilities })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
