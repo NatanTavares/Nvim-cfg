@@ -41,7 +41,7 @@ return {
       end,
     })
 
-    vim.keymap.set("n", "<leader>f", vim.lsp.buf.format, {})
-    vim.keymap.set("n", "<leader>F", ":ToggleAutoFormat<CR>", { desc = "Toggle auto-format on save" })
+    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, {})
+    vim.keymap.set("n", "<leader>gF", ":ToggleAutoFormat<CR>", { desc = "Toggle auto-format on save" })
   end,
 }
