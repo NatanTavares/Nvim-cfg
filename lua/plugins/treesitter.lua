@@ -1,4 +1,20 @@
-local langs = { "c", "json", "lua", "proto", "typescript", "go", "vim", "sql" }
+local langs = {
+  "lua",
+  "vim",
+
+  "json",
+  "proto",
+
+  "javascript",
+  "typescript",
+  "tsx",
+  "html",
+  "css",
+
+  "dockerfile",
+  "go",
+  "sql",
+}
 
 return {
   {
@@ -12,6 +28,18 @@ return {
         sync_install = false,
         highlight = { enable = true },
         indent = { enable = true },
+        textObjects = {
+          select = {
+            enable = true,
+            lookahead = true,
+            keymaps = {
+              ["af"] = "@function.outer",
+              ["if"] = "@function.inner",
+              ["ac"] = "@class.outer",
+              ["ic"] = "@class.outer",
+            },
+          },
+        },
       })
     end,
   },
