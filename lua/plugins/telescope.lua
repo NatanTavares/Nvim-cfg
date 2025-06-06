@@ -1,4 +1,3 @@
--- In lua/plugins/telescope.lua (or init.lua)
 return {
   {
     "nvim-telescope/telescope-ui-select.nvim",
