@@ -1,22 +1,4 @@
 return {
-  -- {
-  --    "stevearc/conform.nvim",
-  --    opts = {
-  --       formatters_by_ft = {
-  --          lua = { "stylua" },
-  --          python = { "black" },
-  --          javascript = { "prettier" },
-  --          javascriptreact = { "prettier" },
-  --          typescript = { "prettier" },
-  --          typescriptreact = { "prettier" },
-  --          astro = { "prettier" },
-  --          cpp = { "clang-format" },
-  --       },
-  --       format_after_save = {
-  --          lsp_format = "fallback",
-  --       },
-  --    },
-  -- },
   {
     "MaximilianLloyd/tw-values.nvim",
     keys = {
@@ -36,26 +18,6 @@ return {
     "nacro90/numb.nvim",
     opts = {},
   },
-  -- {
-  --    "stevearc/oil.nvim",
-  --    opts = {
-  --       columns = { "" },
-  --       keymaps = {
-  --          ["<C-v>"] = "actions.select_vsplit",
-  --          ["<C-s>"] = "actions.select_split",
-  --          ["<Esc>"] = "actions.close",
-  --       },
-  --       view_options = {
-  --          show_hidden = true,
-  --       },
-  --       float = {
-  --          padding = 5,
-  --       },
-  --    },
-  --    keys = {
-  --       { "<Leader>o", ":lua require('oil').open_float()<CR>" },
-  --    },
-  -- },
   {
     "numToStr/Comment.nvim",
     opts = {
@@ -80,7 +42,10 @@ return {
     "shortcuts/no-neck-pain.nvim",
     version = "*",
     config = function()
-      print("no neck pain must be stylezed")
+      require("no-neck-pain").setup({
+        width = 150,
+        killScratchBuffer = true,
+      })
     end,
     keys = {
       { "<Leader>n", ":NoNeckPain<CR>" },
