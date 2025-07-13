@@ -7,6 +7,7 @@ local lsps = {
   "buf_ls",
 
   "ts_ls",
+  "prismals",
   "html",
   "cssls",
   "eslint",

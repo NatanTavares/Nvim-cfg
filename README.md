@@ -1,3 +1,1 @@
-## TO DO:
-
-- [ ] setup wakatime
+## Neovim configuration
